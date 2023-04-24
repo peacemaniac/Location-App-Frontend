@@ -1,0 +1,57 @@
+.location {
+  background-color: var(--bg-card);
+  border: 1px solid var(--text);
+  padding: 16px;
+  box-shadow: 8px 8px 0 0 var(--text);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  column-gap: 16px;
+}
+
+@media (max-width: 649.99px) {
+  .location {
+    grid-template-areas:
+      "image image image image"
+      "meta meta meta meta"
+      "ingredients ingredients ingredients ingredients"
+      "steps steps steps steps";
+  }
+}
+
+@media (min-width: 650px) {
+  .location {
+    grid-template-areas:
+      "image image image meta"
+      "ingredients steps steps steps";
+  }
+}
+
+.location h1 {
+  font-weight: var(--font-weight-regular);
+  font-family: var(--type-display);
+  font-size: 2rem;
+}
+
+.location .image-wrapper {
+  grid-area: image;
+}
+
+.location-meta {
+  grid-area: meta;
+}
+
+.location-ingredients {
+  grid-area: ingredients;
+}
+
+.location-steps {
+  grid-area: steps;
+}
+
+.btn-danger {
+  color: white;
+  background-color: red;
+  margin: 15px;
+}
